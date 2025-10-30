@@ -1,0 +1,18 @@
+.cta {    
+    .ppc-cta-block {
+        flex-direction: column;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        gap: 8px;
+    }
+    .container {
+        .columns {
+            @include ppc-block;
+        }
+    }
+    .ppc-cta-block {
+        p {
+            letter-spacing: 0;
+        }
+    }
+}

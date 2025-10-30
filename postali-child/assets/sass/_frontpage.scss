@@ -1,0 +1,1302 @@
+/**
+ * Template Front Page Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+.page-template-front-page {
+    h3 {
+        color:$dk-blue;
+    }
+
+    p.top {
+        margin-bottom: 10px !important;
+        font-weight: 800;
+        line-height: 135%;
+    }
+
+    a.bold {
+        color: $orange;
+        text-transform: uppercase;
+        font-family: $nunito;
+        font-weight: 800;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+
+        .icon-right-arrow {
+            font-size: 24px;
+            margin-left: 15px;
+            margin-top: -2px;
+            transition: $trans;
+            font-weight: bold;
+        }
+
+        &:hover {
+            .icon-right-arrow {
+                margin-left: 19px;
+            }
+        }
+    }
+
+    .bottom-link {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-bottom: 3px solid $md-grey;
+        padding-bottom: 7px;
+
+        @include respond(tab-port) {
+            position: relative;
+            bottom: auto;
+            margin:30px 0;
+        }
+
+        &.desktop {
+            @include respond(tab-port) {
+                display:none;
+            }
+        }
+
+        &.mobile {
+            display:none;
+            
+            @include respond(tab-port) {
+                display:block;
+                margin: 10px 0 40px;
+            }
+        }
+    }
+
+    #banner {
+        @include respond(phone) {
+            padding-top:0;
+        }
+        
+        .container {
+            .columns {
+                align-items: flex-start;
+
+                @include respond(desktop) {
+                    align-items: flex-start;
+                }
+                
+                h1 {
+                    font-family: $nunito;
+                    font-size: 20px;
+                    color: $dk-blue;
+                    font-weight: 800;
+                    margin-bottom: 15px !important;
+
+                    @include respond(phone) {
+                        display:none;
+                    }
+
+                    &.mobile {
+                        display:none;
+
+                        @include respond(phone) {
+                            display:block !important;
+                        }
+                    }
+                }
+
+                .banner-headline {
+                    font-family: $nunito;
+                    text-transform: none;
+                    font-weight: 800 !important;
+                    font-size: 62px;
+                    line-height: 110%;
+                    margin-bottom: 25px !important;
+
+                    @include respond(phone) {
+                        font-size: 30px;
+                    }
+                }
+
+                .banner-subhead {
+                    color:$lt-blue;
+                    font-family: $nunito;
+                    font-size: 28px;
+                    color:$dk-blue;
+                    font-weight: 800;
+                    margin-bottom: 25px;
+
+                    @include respond(phone) {
+                        display:none;
+                    }
+                }
+
+                .column-50 {
+                    width:53%;
+
+                    @include respond(tab-land) {
+                        width:100%;    
+                    }
+
+                    ul {
+                        li {
+                            font-size: 16px;
+                            font-weight: normal;
+                            margin-bottom: 0 !important;
+
+                            @include respond(phone) {
+                                margin-bottom: 10px !important;
+                                line-height: 145%;
+                            }
+                        }
+                    }
+
+                    .banner-cta {
+                        margin-top: 35px;
+
+                        @include respond(phone) {
+                            margin-top: 20px !important;
+                        }
+                    }
+
+                    &.photo {
+                        width:42%;
+
+                        @include respond(tab-land) {
+                            width:100%;  
+                            margin-bottom: 30px;  
+                        }
+    
+                        img, picture {
+                            width:100%;
+                           -o-object-fit: cover;
+                              object-fit: cover;
+                           -o-object-position: top;
+                              object-position: top;
+
+                            @include respond(tab-port) {
+                                margin-top: 0;
+                            }
+
+                            @include respond(phone) {
+                                height:200px;
+                            }
+                        }
+
+                        &::after {
+                            position: absolute;
+                            bottom: 10%;
+                            left: 5%;
+                            content: "";
+                            background-image: url(/wp-content/uploads/2024/08/hkd-825m-badge.png);
+                            height: 200px;
+                            width: 160px;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center;
+
+                            @include respond(tab-port) {
+                                background-image: url(/wp-content/uploads/2024/08/Mobile-hp-banner-825m.svg);
+                                background-size: 100%;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                width: 300px;
+                                bottom: 25px !important;
+                                height: 56px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hp-results {
+        padding:30px 0;
+        
+        .container {
+            .columns {
+                align-items: normal;
+
+                .result-cta {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &.mobile {
+                        display:none;
+
+                        @include respond(tab-port) {
+                            display:flex;
+                        }
+                    }
+
+                    &.desktop {
+                        @include respond(tab-port) {
+                            display:none;
+                        }
+                    }
+
+                    @include respond(tab-land) {
+                        width:48%;
+                        margin:0 1% 2%;
+                    }
+
+                    @include respond(tab-port) {
+                        width:100%;
+                        margin:0 0 15px;
+                        flex-wrap: wrap;
+
+                        p {
+                            width:100%;
+                        }
+                    }
+
+                    .cta-container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        
+                        p {
+                            margin-bottom: 15px !important;
+                            font-size: 22px;
+                            text-align: center;
+                            line-height: 105%;
+                        }
+                        
+                        a {
+                            margin: 0 auto;
+                            padding:15px 25px;
+                        }
+                    }
+                }
+
+                .result {
+                    width: 23.6%;
+                    padding: 3% 2%;
+                    justify-content: center;
+                    display: flex;
+                    background: $white;
+                    margin: 0 .7% 0;
+
+                    @include respond(tab-land) {
+                        width:48%;
+                        margin:0 1% 2%;
+                    }
+
+                    @include respond(tab-port) {
+                        width:100%;
+                        margin:0 0 15px;
+                        padding:50px 20px;
+                    }
+        
+                    .result-amount {
+                        font-family: $nunito;
+                        font-weight: 800;
+                        font-size: 36px;
+                        color: $orange;
+                        margin-bottom: 15px;
+                        width: 100%;
+                        text-align: center;
+
+                        @include respond(desktop) {
+                            font-size: 32px;
+                        }
+                    }
+        
+                    .result-category {
+                        font-family: $nunito;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        font-size: 14px;
+                        font-weight: bold;
+                        color:$blk;
+                        text-align: center;
+                    }
+        
+                    &:hover {
+                        background:$dk-blue;
+    
+                        .result-amount {
+                            color:$white;
+                        }
+    
+                        .result-category {
+                            color:$white;
+                        }
+    
+                        .icon-right-arrow {
+                            &::before {
+                                color:$white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hp-difference {
+        @include respond(phone) {
+            padding-bottom: 0;
+        }
+
+        .container {
+            .columns {
+                align-items: normal;
+
+                .difference-awards {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    @include respond(phone) {
+                        flex-wrap: wrap;
+                    }
+
+                    .spacer-30 {
+                        display:none;
+
+                        @include respond(phone) {
+                            display:block;
+                        }
+                    }
+
+                    p {
+                        white-space: nowrap;
+                        margin-bottom: 0;
+
+                        @include respond(desktop) {
+                            white-space: normal;
+                            margin-bottom: 0;
+                            max-width: 100px;
+                            line-height: 115%;
+                        }
+
+                        @include respond(phone) {
+                            white-space: nowrap;
+                            display:contents;
+                        }
+                    }
+
+                    img, picture {
+                        max-height: 60px;
+                    }
+                }
+                
+                &#difference {
+                    background:$lt-grey;
+                    position: relative;
+
+                    @include respond(phone) {
+                        margin-bottom: 50px;
+
+                        &::before,
+                        &::after {
+                            content:"";
+                            width:40px;
+                            height: 100%;
+                            position: absolute;
+                            background:$lt-grey;
+                        }
+
+                        &::before {
+                            left:-40px
+                        }
+
+                        &::after {
+                            right:-40px
+                        }
+                    }
+
+                    .column-50 {
+                        &:first-of-type {
+                            padding: 3% 0 3% 3%;
+                        }
+
+                        &:last-of-type {
+                            padding: 3% 3% 3% 0;
+                        }
+
+                        .video-embed {
+                            width:100%;
+                            position: relative;
+                            overflow: hidden;
+                            padding-top: 56.25%;
+
+                            .responsive-video {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                bottom: 0;
+                                right: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }                        
+
+                        @include respond(tab-port) {
+                            &:first-of-type {
+                                padding: 40px 40px 0
+                            }
+    
+                            &:last-of-type {
+                                padding: 0 40px 40px 40px;
+                            }
+                        }
+
+                        @include respond(phone) {
+                            &:first-of-type {
+                                padding: 40px 0 0;
+                            }
+    
+                            &:last-of-type {
+                                padding: 0 0 40px 0;
+                            }
+                        }
+
+                        h3 {
+                            color:$blk;
+                            margin-bottom: 30px !important;
+                        }
+                    }
+
+                    .content-box {
+                        .ellipsis {
+                            display: none;
+                            
+                            &.visible {
+                                display:inline-block;
+                            }
+                        }
+                
+                        .extra {
+                            display:none;
+                            opacity:0;
+                    
+                            &.fadein {
+                                display:contents;
+                                -webkit-animation: fadeInFromNone 0.5s ease-out;
+                                animation: fadeInFromNone 0.5s ease-out;
+                                opacity:1;
+                            }
+                
+                            @keyframes fadeInFromNone {
+                                0% {display: none; opacity: 0; }
+                                1% { display: inline; opacity: 0;}
+                                100% { display: inline; opacity: 1 !important; }
+                            }
+                
+                            @-webkit-keyframes fadeInFromNone {
+                                0% {display: none; opacity: 0; }
+                                1% { display: inline; opacity: 0;}
+                                100% { display: inline; opacity: 1 !important; }
+                            }
+                        }
+                    }
+                
+                    .transcript-more {
+                        display: flex;
+                        align-items: center;
+                        transition: $trans;
+                        cursor: pointer;
+
+                        &:hover,
+                        &.clicked {
+                            .plus {
+                                background: $dk-blue !important;
+                                font-weight: bold !important;
+                                transition: $trans;
+                            }
+                        }
+
+                        &.clicked {
+                            .plus {
+                                span {
+                                    rotate: 45deg;
+                                }
+                            }
+                        }
+                
+                        .plus {
+                            display: flex;
+                            margin-right: 15px;
+                            height: 35px;
+                            width: 35px;
+                            background: $orange;
+                            color: $white;
+                            justify-content: center;
+                            align-items: center;
+                            line-height: 0;
+                            font-size: 24px;
+                            font-weight: 200;
+                            font-family: $nunito;
+                        }
+                
+                        p {
+                            margin: 0;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hp-practice-areas {
+        padding-top: 0;
+        
+        .container {
+            .columns {
+                align-items: normal;
+                justify-content: flex-start;
+
+                .hp-pa {
+                    width:32.3%;
+                    margin:.5%;
+                    padding: 40px;
+                    box-sizing: border-box;
+                    background-color: $lt-grey;
+                    min-height: 350px;
+                    display: block;
+
+                    @include respond(tab-land) {
+                        width:48%;
+                        margin:1%;
+                    }
+
+                    @include respond(tab-port) {
+                        width:100%;
+                        margin:2% 0;
+                        min-height: auto;
+                    }
+
+                    &:hover {
+                        background-color: lighten($lt-grey, 4%);
+
+                        .name {
+                            &::after {
+                                content: "\e909";
+                                font-family: $icomoon;
+                                position: absolute;
+                                top: -1px;
+                                right: -65px;
+                                font-size: 26px;
+                            }
+                        }
+                    }
+
+                    &.all {
+                        @include blue-gradient-vertical;
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &:hover {
+                            .block-content {
+                                p {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+
+                        .block-content {
+                            display:block;
+                            text-align: center;
+
+                            p {
+                                &.xlarge {
+                                    color:$white;
+                                    margin-bottom: 5px;
+                                    text-align: center;
+                                    max-width: 75%;
+                                    margin: 0 auto 20px;
+                                }
+                            }
+
+                            span {
+                                font-size: 36px;
+                                margin: 0 auto;
+                                color:$white;
+                            }
+                        }
+                    }
+
+                    .name {
+                        width:calc(100% - 50px);
+                        font-family: $nunito;
+                        color:$dk-blue;
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                        line-height: 145%;
+                        font-weight: 800;
+                        margin-bottom: 20px;
+                        position: relative;
+
+                        a {
+                            font-family: inherit;
+                            color: inherit;
+                            font-weight: inherit;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+
+                        &::after {
+                            content: "\e909";
+                            font-family: $icomoon;
+                            position: absolute;
+                            top: -1px;
+                            right: -60px;
+                            font-size: 26px;
+                            transition:$trans;
+                        }
+                    }
+
+                    .copy {
+                        color:$blk;
+
+                        @include respond(tab-port) {
+                            p {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hp-result {
+        padding: 0;
+
+        .container {
+            padding:0 !important;
+            margin:0;
+            max-width: 100%;
+
+            .columns {
+                align-items: center;
+
+                .column-50 {
+                    width:50%;
+                    padding:3% 10% 3% 5%;
+
+                    @include respond(tab-port) {
+                        width:100%;
+                        padding:60px;
+                    }
+
+                    @include respond(phone) {
+                        padding:40px;
+                    }
+
+                    .amount {
+                        font-family: $nunito;
+                        font-weight: 800;
+                        font-size: 36px;
+                        color: $orange;
+                        margin-bottom: 15px;
+                        width: 100%;
+                    }
+
+                    .category {
+                        font-family: $nunito;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: $blk;
+                    }
+    
+                    &.photo {
+                        padding:0;
+
+                        img, picture {
+                            -o-object-fit: cover;
+                               object-fit: cover;
+                            -o-object-position: center;
+                               object-position: center;
+                            width: 100%;
+                            height: 390px;
+
+                            @include respond(phone) {
+                                height:275px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hp-help {
+        .container {
+            .columns {
+                align-items: flex-start;
+
+                @include respond(desktop) {
+                    align-items: flex-start;
+                }
+
+                .column-50 {
+                    .address-map {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        @include respond(desktop) {
+                            flex-wrap: wrap;
+                        }
+
+                        p {
+                            margin-bottom: 0;
+                        }
+
+                        .address {
+                            p a {
+                                font-size: 16px;
+                            }
+                        }
+
+                        .address,
+                        .map {
+                            width: 47%;
+
+                            @include respond(desktop) {
+                                width:100%;
+                            }
+                        }
+
+                        .map {
+                            iframe {
+                                width: 100%;
+                                height:200px;
+                            }
+
+                            @include respond(desktop) {
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+
+                    &.photo {
+                        img, picture {
+                            width: 100%;
+                            -o-object-fit: cover;
+                               object-fit: cover;
+                            -o-object-position: center;
+                               object-position: center;
+                            max-height: 590px;
+
+                            @include respond(tab-port) {
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+
+                    @include respond(desktop) {
+                        .spacer-60 {
+                            height:30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hp-about {
+        .container {
+            .columns {
+                align-items: normal;
+            }
+        }
+    }
+
+    #hp-meet {
+        .container {
+            .columns {
+                align-items: normal;
+
+                @include respond(tab-land) {
+                    justify-content: center;
+                }
+
+                h3 {
+                    margin: 0 auto;
+                }
+
+                .column-33 {
+                    &.attorney {
+                        display:block;
+                        background:$lt-grey;
+
+                        p {
+                            color:$blk;
+                        }
+
+                        @include respond(tab-land) {
+                            width:48%;
+                            margin:1%;
+                        }
+
+                        @include respond(tab-port) {
+                            width:100%;
+                            margin:0 0 15px;
+                        }
+
+                        .attorney-photo {
+                            width:100%;
+                            
+                            img, picture {
+                                -o-object-fit: cover;
+                                   object-fit: cover;
+                                -o-object-position: top;
+                                   object-position: top;
+                                height: 390px;
+                                width: 100%;
+
+                                @include respond(phone) {
+                                    height:325px;
+                                }
+                            }
+                        }
+
+                        .attorney-content {
+                            padding: 30px 30px 80px;
+
+                            p {
+                                &.title {
+                                    font-size: 20px;
+                                    letter-spacing: 2px;
+                                    text-transform: uppercase;
+                                    color: $dk-blue;
+                                    font-weight: 800;
+                                    line-height: 125%;
+
+                                    em {
+                                        font-size: 18px; 
+                                        color:$blk;
+                                        letter-spacing: 0;
+                                        text-transform: none;
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                        }
+
+                        .attorney-link {
+                            display: flex;
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            padding: 30px;
+                            box-sizing: border-box;
+                            
+                            .btn {
+                                width:100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hp-assessment {
+        padding: 0;
+
+        .container {
+            padding:0 !important;
+            margin:0;
+            max-width: 100%;
+
+            .columns {
+                align-items: center;
+
+                .column-50 {
+                    width:50%;
+                    padding:3% 10% 3% 5%;
+
+                    @include respond(tab-port) {
+                        width:100%;
+                        display:block;
+                        padding:60px;
+                    }
+
+                    @include respond(phone) {
+                        padding:40px;
+                    }
+
+                    p {
+                        margin-bottom: 5px !important;
+                    }
+
+                    ul {
+                        li {
+                            font-size: 16px;
+                            font-weight: normal;
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .cta-block {
+                        display:flex;
+                        flex-wrap: wrap;
+                    }
+
+                    .form  {
+                        display: inline-flex;
+                        margin-left: 40px;
+                        margin-top: 20px;
+
+                        @include respond(tab-land) {
+                            margin-left: 0;
+                            width:100%;
+                        }
+                        
+                        a {
+                            font-family: $nunito;
+                            text-decoration: underline;
+                            color:$blk;
+                            font-size: 16px;
+                        }
+                    }
+    
+                    &.photo {
+                        padding:0;
+
+                        img, picture {
+                            -o-object-fit: cover;
+                               object-fit: cover;
+                            -o-object-position: center;
+                               object-position: center;
+                            width: 100%;
+                            height: 475px;
+
+                            @include respond(phone) {
+                                height:300px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hp-process {
+        @include respond(phone) {
+            padding-top: 0;
+        }
+
+        .container {
+            .columns {
+                .column-50 {
+                    &.steps {
+                        background:$lt-grey;
+                        display:flex;
+                        justify-content: space-between;
+                        padding:40px 30px;
+                        flex-wrap: nowrap;
+
+                        &::after {
+                            position: absolute;
+                            left: 10%;
+                            width: 80%;
+                            content: "";
+                            height: 2px;
+                            background: $lt-blue;
+                            top: 75px;
+                            z-index: 0;
+                        }
+                        
+                        .step {
+                            width:18%;
+                            text-align: center;
+                            justify-content: center;
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            .number {
+                                height: 70px;
+                                width: 70px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 42px;
+                                font-family: $oswald;
+                                border: 1px solid$blk;
+                                border-radius: 50%;
+                                color: $lt-blue;
+                                background: $white;
+                                margin-bottom: 25px;
+                                z-index: 1;
+                                position: relative;
+
+                                &::before {
+                                    width: 50px;
+                                    height: 20px;
+                                    content: "";
+                                    position: absolute;
+                                    top: -18px;
+                                    background-image: url(/wp-content/uploads/2024/03/step.svg);
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: 66%;
+                                    rotate: -1deg;
+                                }
+                            }
+                        }
+
+                        p {
+                            font-weight: bold;
+                            line-height: 125%;
+                            margin-bottom: 0;
+                            font-size: 16px;
+                        }
+
+                        @include respond(desktop) {
+                            display:none;
+                        }
+                    }
+                }
+
+                .column-75 {
+                    &.steps {
+                        .step {
+                            display: flex;
+                            margin-bottom: 30px;
+                            align-items: center;
+
+                            @include respond(tab-port) {
+                                align-items: flex-start;
+                            }
+
+                            .step-box {
+                                padding:25px 15px 15px;
+                                background-color: $lt-grey;
+                                margin-right: 30px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                @include respond(phone) {
+                                   margin-right: 20px;
+                                }
+                                
+                                .number {
+                                    height: 70px;
+                                    width: 70px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: 42px;
+                                    font-family: $oswald;
+                                    border: 1px solid$blk;
+                                    border-radius: 50%;
+                                    color: $lt-blue;
+                                    background: $white;
+                                    margin-bottom: 0;
+                                    z-index: 1;
+                                    position: relative;
+
+                                    @include respond(phone) {
+                                        height:40px;
+                                        width: 40px;
+                                        font-size: 30px;
+                                    }
+
+                                    &::before {
+                                        width: 50px;
+                                        height: 20px;
+                                        content: "";
+                                        position: absolute;
+                                        top: -18px;
+                                        background-image: url(/wp-content/uploads/2024/03/step.svg);
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        background-size: 66%;
+                                        rotate: -1deg;
+                                    }
+                                }
+                            }
+
+                            .step-copy {
+                                p {
+                                    margin-bottom: 0 !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #hp-elements {
+        background:$md-grey;
+    
+        .container {
+            .columns {
+                align-items: normal;
+
+                &:last-of-type {
+                    display: block;
+                    text-align: center;
+                    margin-top: 60px;
+
+                    a {
+                        margin: -10px auto 0;
+                    }
+                }
+
+                .column-33 {
+                    padding: 3%;
+                    background-color:$white;
+                    display: block;
+
+                    @include respond(tab-port) {
+                        margin-bottom: 15px;
+                        padding:30px;
+
+                    }
+
+                    p {
+                        margin-bottom: 0;
+
+                        &.xlarge {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include respond(phone) {
+            .spacer-60 {
+                height: 20px;
+            }
+        }
+    }
+
+    #hp-damages {
+        .container {
+            .columns {
+                align-items: normal;
+
+                .photo {
+                    img, picture {
+                        -o-object-fit: cover;
+                           object-fit: cover;
+                        -o-object-position: center;
+                           object-position: center;
+                        width: 100%;
+                        height:100%;
+                        max-height: 550px;
+                    }
+                }
+            }
+        }
+    }
+
+    #hp-faqs {
+        .container {
+            .columns {
+                .column-50 {
+                    a.bold {
+                        display:inline-block;
+                    }
+
+                    span.icon-right-arrow {
+                        color:$orange;
+                        display:inline-block;
+                        margin-left: 12px;
+                        font-size: 24px;
+                        vertical-align: middle;
+                    }
+
+                    @include respond(tab-port) {
+                        h4 {
+                            line-height: 140%;
+                        }
+                    }
+
+                    h3 {
+                        font-family: $nunito;
+                        font-size: 20px;
+                        color:$blk;
+                        font-weight: 800 !important;
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                        margin:35px 0 15px !important;
+                        line-height: 150%;
+                    }
+                }
+            }
+        }
+    }
+
+    #hp-contact {
+        .container {
+            .columns {
+                align-items: normal;
+
+                @include respond(tab-port) {
+                    flex-direction: column-reverse;
+                }
+                
+                .column-50 {
+                    &.centered {
+                        @include respond(tab-land) {
+                            width:75%;    
+                        }
+
+                        @include respond(tab-port) {
+                            width:100%;
+                            margin-bottom: 30px;
+                        }
+                    }
+
+                    .map {
+                        width: 100%;
+                        background-size: cover;
+                        background-position: center;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: flex-end;
+                        justify-content: center;
+
+                        @include respond(tab-port) {
+                            padding:50px;
+                        }
+
+                        .quote {
+                            display: block;
+                            text-align: center;
+                            width: 100%;
+                        }
+
+                        .logo {
+                            display: block;
+                            align-self: flex-end;
+                            margin-bottom: 60px;
+
+                            @include respond(tab-port) {
+                                margin-bottom: 0;
+                            }
+                        }                            
+                    }
+
+                    &.block {
+                        @include respond(tab-port) {
+                            margin-bottom: 30px;
+
+                            .gform_wrapper {
+                                margin-top: -70px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,210 @@
+/**
+ * Web Font Styles, H Styles, Body Text Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+/* Fonts */
+body, h1, h2, h3, h4, h5, h6, p, a, ul {
+    // color: $body-text-color;
+} 
+p, a, ul, ol {
+
+}
+ul li, ol li {
+    margin: 0 0 0 20px;
+    font-size: 18px;
+}
+dl, blockquote, img {
+
+}
+
+a {
+    text-decoration:none;
+    transition:$trans;
+    &:hover {
+        // color:$lt-red;
+        text-decoration:none;
+    }
+
+    &.form-link {
+        text-decoration: underline;
+        transition: none;
+        font-weight: 400;
+
+        &:hover {
+            font-weight: 700;
+            transition: none;
+            text-decoration: underline;
+            color:inherit;
+        }
+    }
+
+    &.bold {
+        color: $orange;
+        text-transform: uppercase;
+        font-family: $nunito;
+        font-weight: bold;
+        font-size: 16px;
+        display:flex;
+        align-items: center;
+        text-decoration: none;
+
+        .icon-right-arrow {
+            font-size: 24px;
+            margin-left: 15px;
+            transition: $trans;
+        }
+
+        &:hover {                    
+            .icon-right-arrow {
+                margin-left: 18px;
+            }
+        }
+    }
+}
+
+h1 {
+    font-family: $nunito;
+    text-transform: none;
+    font-weight: 800 !important;
+    font-size: 3.3rem;
+    line-height: 110%;
+    margin-bottom: 40px !important;
+
+    @include respond(phone) {
+        font-size: 36px;
+    }
+}
+
+h2 {
+    font-family: $nunito;
+    font-size: 2.4rem;
+    color:$dk-blue;
+    font-weight: 800 !important;
+    margin: 20px 0 !important;
+    letter-spacing: 0;
+
+    @include respond(phone) {
+        font-size: 30px;
+        letter-spacing: 0;
+    }
+}
+
+h3 {
+    font-family: $nunito;
+    font-size: 1.5rem;
+    color:$blk;
+    font-weight: 800 !important;
+    margin-bottom: 10px !important;
+}
+
+h4 {
+    font-family: $nunito;
+    font-size: 20px;
+    color:$blk;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin:35px 0 15px !important;
+    line-height: 150%;
+
+    a {
+        font-family: inherit;
+        color: inherit;
+        font-weight: inherit;
+        text-decoration: underline;
+
+        &:hover {
+            color:$dk-blue;
+        }
+    }
+}
+
+p {
+    font-size:1rem;
+    line-height: 1.6rem;
+    margin-bottom:30px;
+    font-family: $nunito;
+    font-weight: 300;
+    margin-top: 0;
+
+    @include respond(phone) {
+        line-height: 1.4rem;
+    }
+
+    a {
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: bold;
+        color:$blk;
+        text-decoration: underline;
+        transition: $trans;
+
+        &:hover {
+            color: $dk-blue;
+            text-decoration: none;
+        }
+    }
+
+    &.accent {
+        color:$dk-blue;
+        font-size: 20px;
+        font-weight: 600;
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+
+    &.large {
+        font-size: 20px;
+    }
+
+    &.xlarge {
+        font-size: 24px;
+    }
+
+    &.small {
+        font-size: 14px;
+    }
+    
+    &.caps {
+        text-transform: uppercase;
+    }
+
+    &.spaced {
+        letter-spacing: 2px;
+    }
+
+    &.bottom-15 {
+        margin-bottom: 15px;
+    }
+
+    &.bottom-0 {
+        margin-bottom: 0;
+    }
+
+    &.blue {
+        color:$dk-blue;
+    }
+
+    &#breadcrumbs {
+        font-size: 15px;
+        margin-bottom: 10px;
+
+        a {
+            color:$blk;
+        }
+    }
+}
+ul {
+    &.two-columns-list {
+        -moz-column-count: 2;
+             column-count: 2;
+
+        @include respond(tab-port) {
+            -moz-column-count: 1;
+                 column-count: 1;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "key": "group_664e14cf8bff8",
+    "title": "Blogs",
+    "fields": [
+        {
+            "key": "field_664e14f8b5c6f",
+            "label": "Add custom alt text?",
+            "name": "add_custom_alt_text",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "If this box is checked, the alt text will default to the page title (H1). If different alt text is needed, enter it into the box below.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_column_enabled": 0,
+            "choices": {
+                "yes": "Yes"
+            },
+            "default_value": [],
+            "return_format": "value",
+            "allow_custom": 0,
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
+            "key": "field_664e14fcb5c70",
+            "label": "Custom alt text",
+            "name": "custom_alt_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Leave blank to use current page title as alt text",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_664e14f8b5c6f",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_column_enabled": 0,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "blogesp"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1716393292
+}

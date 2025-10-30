@@ -1,0 +1,65 @@
+#accordions-block {
+    h2 {
+        text-align: center;
+        width: 100%;
+    }
+    .container {
+        padding:0 !important;
+    }
+    .accordions {
+        width: 100%;
+        background: #356F9C;
+        margin-bottom: 20px;
+
+        .accordions_title {
+            position: relative;
+            padding: 30px 8% 30px 30px;
+            font-family: $nunito;
+            font-style: normal !important;
+            h3 {
+                margin-top: 0 !important;
+                color:white;
+                font-size: 22px !important;
+                font-weight: 500;
+                font-family: $nunito;
+                font-style: normal !important;
+            }
+
+            span {
+                &::after {
+                    content: "+";
+                    transition: 0.2s linear;
+                    position: absolute;
+                    top: calc(50% - 20px);
+                    right: 30px;
+                    height: 40px;
+                    width: 40px;
+                    font-size: 44px;
+                    background: #fff;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    border-radius: 50%;
+                    font-weight: 100;
+                    color: #356F9C;
+                    font-family: $nunito;
+                }
+            }
+        }
+
+        .accordions_content {
+            padding: 40px 40px 10px 40px;
+            background: white;
+            box-sizing: border-box;
+            width: 100%;
+
+            p {
+                font-size: 18px !important;
+                line-height: 145% !important;
+                font-family: $nunito;
+                font-style: normal !important;
+                color: $blk !important;
+            }
+        }
+    }
+}

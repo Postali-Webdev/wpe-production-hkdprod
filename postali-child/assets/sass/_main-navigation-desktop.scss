@@ -1,0 +1,505 @@
+
+// keyframes for desktop sub-nav
+
+@keyframes fadein {
+    0% { opacity:0; top:58px; }
+    100% { opacity:1; top:68px; }
+}
+
+@-webkit-keyframes fadein {
+    0% { opacity:0; top:58px; }
+    100% { opacity:1; top:68px; }
+}
+
+#menu-global-practice-areas-mobile {
+    display:none !important;
+}
+
+.practice-areas-mobile {
+    display:none !important;
+}
+
+.accordion-toggle2 {
+    display: none;
+}
+
+header {    
+    #header-top {
+        &_right {
+            width: 75%;
+            display: flex;
+            justify-content: flex-end;
+            max-width: 900px;
+            flex-wrap: wrap;
+
+            .translate {
+                margin:3px 0 -8px;
+                margin-right: 45px;
+                align-items: center;
+                display: flex;
+                flex-wrap: nowrap;
+
+                a {
+                    font-family: $nunito;
+                    font-size: 12px;
+                    color:$lt-blue;
+                    font-weight: bold;
+                    line-height: 80%;
+                }
+            }
+            
+            &_menu {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                
+                .desktop-nav-container {
+                    display:flex;
+                    
+                    .menu {
+                        list-style-type: none;
+                        display: flex;
+                        padding-bottom:0 !important;
+                        align-items: center;
+                        width: 100%;
+                        justify-content: space-between;
+                        margin-left: 0;
+    
+                        li {
+                            display: flex;
+                            flex-wrap: nowrap;
+                            margin:0 7px;
+                            position: relative;
+                            height: auto;
+    
+                            .accordion-toggle {
+                                display:none;
+                            }
+    
+                            &:not(.menu-item-search) {
+                                &.disable {
+                                    opacity: 0.5;
+                                    pointer-events: none;
+                                }
+                            }
+    
+                            &.menu-item-has-children {
+                                &::after {
+                                    content: "\e907";
+                                    font-family: $icomoon;
+                                    position: relative;
+                                    margin-top: 15px;
+                                    left: auto;
+                                    right: 6px;
+                                    height: 0px;
+                                    z-index: 1;
+                                    color: $white;
+                                    display: block;
+                                    font-size: 8px;
+                                }
+                            }
+    
+                            // hover states to display sub-menu
+                            &:hover, 
+                            > a:focus ~, 
+                            > a:focus-visible ~ {
+                                a {
+                                    color:$dk-blue;
+                                    
+                                    &:before {
+                                        right: 20px;
+                                    }
+                                }
+    
+                                .sub-menu {
+                                    display:block;
+                                    z-index: 0;
+                                    -webkit-animation: .3s ease 0s normal forwards 1 fadein;
+                                    animation: .3s ease 0s normal forwards 1 fadein;
+    
+                                    li {
+                                        a {
+                                            background:none;
+                                            color:$white !important;
+                                            white-space: normal;
+                                            text-align: center;     
+                                            display: block;                                   
+    
+                                            &:hover {
+                                                color:$white !important;
+                                            }
+                                        }
+    
+                                        // nested 3rd level flyout
+                                        .sub-menu {
+                                            display:none;
+                                            position: absolute;
+                                            top: 0 !important;
+                                            margin-left: 100%;
+    
+                                            &:hover {
+                                                display:block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+    
+                            // active menu states for current page / current parent
+                            &.current-menu-parent,
+                            &.current-menu-item,
+                            &.current-page-ancestor {
+                                a {
+                                    color: $dk-blue;
+    
+                                    &:before {
+                                        right: 20px;
+                                        bottom: 30px;
+                                        display:block !important;
+                                    }
+                                }
+    
+                                &:hover {
+                                    .sub-menu {
+                                        left: 0;
+    
+                                        .current_page_item {
+                                            a {
+                                                text-decoration: underline;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .current-menu-item {
+                                text-decoration: underline;
+                                color: $white;
+                            }
+    
+                            // practice areas gigantor menu //
+                            &.nav-practice-areas {
+                                &:hover {                                
+                                    ul.sub-menu {
+                                        -webkit-animation: .3s ease 0s normal forwards 1 fadein2;
+                                        animation: .3s ease 0s normal forwards 1 fadein2;
+                                        display:block;
+                                    }
+                                }
+        
+                                ul.sub-menu {
+                                    position: fixed;
+                                    width: 100%;
+                                    top: 104px;
+                                    border-bottom: none !important;
+                                    padding: 40px 6%;
+                                    box-sizing: border-box;
+                                    text-align: left;
+                                    -webkit-animation: .3s ease 0s normal forwards 1 fadeout2;
+                                    animation: .3s ease 0s normal forwards 1 fadeout2;
+                                    -moz-column-count: 4;
+                                         column-count: 4;
+                                    
+                                    @include blue-gradient;
+        
+                                    @keyframes fadein2 {
+                                        0% { opacity:0; top:75px; }
+                                        100% { opacity:1; top:85px; }
+                                    }
+        
+                                    @-webkit-keyframes fadein2 {
+                                        0% { opacity:0; top:75px; }
+                                        100% { opacity:1; top:85px; }
+                                    }
+        
+                                    @keyframes fadeout2 {
+                                        0% { opacity:1; top:85px; }
+                                        100% { opacity:0; top:75px; }
+                                    }
+        
+                                    @-webkit-keyframes fadeout2 {
+                                        0% { opacity:1; top:85px; }
+                                        100% { opacity:0; top:75px; }
+                                    }
+    
+                                    .tertiary-close {
+                                        display: none;
+                                    }
+        
+                                    li {
+                                        width:20%;
+    
+                                        a {
+                                            text-align: left;
+    
+                                            span {
+                                                white-space: normal;
+                                            }
+                                        }
+                                        
+                                        &:hover {
+                                            a {
+                                                color:$white !important;
+                                                text-decoration: none;
+                                            }
+                                            
+                                            &::after {
+                                                border-bottom: none !important;
+                                            }
+                                        }
+    
+                                        &::after {
+                                            display:none !important;
+                                        }
+        
+                                        a {
+                                            padding:8px 0;
+                                            white-space: nowrap;
+                                        }
+                                    }
+        
+                                    .nav-our-practice-areas {
+                                        pointer-events: none;
+                                        justify-content: flex-start;
+                                        flex-wrap: wrap;
+        
+                                        a {
+                                            span {
+                                                font-size: 15px;
+                                                text-transform: uppercase;
+                                                color:$white;
+                                                letter-spacing: 2px;
+                                                white-space: nowrap;
+                                            }
+        
+                                            &::after {
+                                                display:none;
+                                            }
+                                        }
+        
+                                        .sub-menu {
+                                            display: flex !important;
+                                            position: relative;
+                                            flex-wrap: wrap;
+                                            left: 0;
+                                            transform: none;
+                                            align-items: flex-start;
+                                            margin: 0;
+                                            top: 0;
+                                            -webkit-animation: none;
+                                                    animation: none;
+                                            -moz-column-break-after: column;
+                                                 break-after: column;
+                                            padding: 0;
+                                            box-sizing: border-box;
+                                            width: 100%;
+                                            background-color: transparent;
+                                            min-width: 175px;
+                                            pointer-events: all;
+                                            background:none;
+        
+                                            li {
+                                                width: 80%;
+                                                padding: 0;
+                                                box-sizing: border-box;
+                                                display: block;
+                                                margin: 0;
+    
+                                                a {
+                                                    &:hover {
+                                                        text-decoration: underline;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+    
+                            &.nav-contact {
+                                margin:0 0 0 2%;
+                                transition: $trans;
+                                margin-left: 10px;
+                                
+                                a {
+                                    padding: 14px 40px !important;
+                                    transition: 0.2s ease all;
+                                    @include blue-gradient;
+                                    color:$white;
+                                    text-transform: uppercase;
+        
+                                    &::before {
+                                        display:none !important;
+                                    }
+    
+                                    &:hover {
+                                        @include blue-gradient-reversed;
+                                        color:$white;
+                                    }
+                                }
+    
+                                &.current-menu-item {
+                                    a {
+                                        color:$white !important;
+                                    }
+                                }
+                            }
+    
+                            a {
+                                padding:27px 10px;
+                                font-size: 15px;
+                                font-weight:800;
+                                display: flex;
+                                align-items: center;
+                                z-index: 1;
+                                color:$blk;
+                                font-family: $nunito;
+                                white-space: nowrap;
+                            }
+    
+                            .sub-menu {
+                                white-space: nowrap;
+                                transition: $trans;
+                                position: absolute;
+                                overflow: visible;
+                                background: $dk-blue;
+                                z-index: 500;
+                                margin: 0;
+                                padding: 0;
+                                display: none;
+                                width: auto;
+                                top:90px;
+                                padding: 20px 0;
+                                left: 0;
+                                width: 200px;
+    
+                                .child-close {
+                                    display:none;
+                                }
+    
+                                li {
+                                    margin-left: 0;
+                                    justify-content: center;
+                                    .sub-menu {
+                                        padding: 15px 10px !important;
+                                        @include respond(desktop) {
+                                            padding: 0 !important;
+                                        }
+                                        .tertiary-close {
+                                            display: none !important;
+                                        }
+                                        li {
+                                            a {
+                                                padding: 8px 0 !important;
+                                                @include respond(desktop) {
+                                                    padding: 14px 30px !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:hover {
+                                        a {
+                                            text-decoration: underline;
+                                            color:$white !important;
+                                        }
+                                        
+                                        .sub-menu {
+                                            display:block;
+                                            margin-top: -15px;
+                                        }
+                                    }
+    
+                                    a {
+                                        padding:10px 15px;
+                                        color:$white;
+    
+                                        &::before {
+                                            display:none !important;
+                                        }
+                                    }
+                                }
+                            }
+    
+                            @include nav-search-desktop;
+    
+                            // drop-down positioning 
+                            &#menu-item-24649,
+                            &#menu-item-22719 {
+                                .sub-menu {
+                                    margin-left: -90%;
+    
+                                    @include respond(desktop) {
+                                        margin-left: auto;
+                                    }
+                                }
+                            }
+    
+                            &#menu-item-24790 {
+                                .sub-menu {
+                                    margin-left: -55%;
+    
+                                    @include respond(desktop) {
+                                        margin-left: auto;
+                                    }
+                                }
+                            }
+    
+                            &#menu-item-24797 {
+                                .sub-menu {
+                                    margin-left: -37%;
+    
+                                    @include respond(desktop) {
+                                        margin-left: auto;
+                                    }
+                                }
+                            }
+                        }
+    
+                        @include respond(desktop) {
+                            display:none;
+                        }
+
+                        &#menu-bronx-practice-areas,
+                        &#menu-brooklyn-practice-areas,
+                        &#menu-queens-practice-areas {
+                            .sub-menu {
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                justify-content: flex-start;
+                                
+
+                                li {
+                                    justify-content: flex-start;
+                                }
+                            }
+                        }
+
+                        &#menu-main-navigation-spanish {
+                            .nav-practice-areas {
+                                .sub-menu {
+                                    -moz-column-count: 3 !important;
+                                         column-count: 3 !important;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+    
+                                    li {
+                                        justify-content: flex-start;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                #mobile-sub-close {
+                    display:none;
+                }
+
+                #header-top_mobile {
+                    display:none;
+                }
+            }
+        }
+    }
+}

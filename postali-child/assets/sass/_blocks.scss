@@ -1,0 +1,299 @@
+// banner //
+#banner {
+    padding-top: 40px;
+    position: relative;
+    background-size: cover;
+    background-position: center center !important;
+
+    p {
+        line-height: 145%;
+    }
+
+    #breadcrumbs {
+        padding: 0;
+        font-weight: 600;
+        margin-top: 0;
+        margin-bottom: 50px;
+        font-family: $nunito;
+        font-size: .75rem;
+
+        a {
+            color: $blk;
+            text-decoration: underline;
+            font-weight: 400;
+        }
+    }
+
+    p.banner-cta {
+        font-size: .9rem;
+        margin-bottom: 15px;
+        font-weight: 800;
+        margin-top: 50px;
+    }
+
+    .column-50 {
+        &.photo {
+            img, picture {
+                height: 80%;
+                max-height: 450px;
+                width: 90%;
+                -o-object-fit: cover;
+                   object-fit: cover;
+                margin: 0 0 0 auto;
+                -o-object-position:center top;
+                   object-position:center top;
+
+                @include respond(tab-port) {
+                    height:325px;
+                    margin-top: 40px;
+                    width:100%;
+                }
+
+                @include respond(phone) {
+                    height:250px;
+                }
+            }
+
+            @include respond(phone) {
+                width: calc(100% + 80px) !important;
+                margin-bottom: 30px;
+                margin-left: -40px;
+                margin-right: -40px;
+            }
+        }
+    }
+
+    .column-33 {
+        &.photo {
+            @include respond(tab-port) {
+                margin-bottom: 40px;
+            }
+
+            img, picture {
+                height: 380px;
+                width: 90%;
+                -o-object-fit: cover;
+                   object-fit: cover;
+                margin: 0 0 0 auto;
+
+                @include respond(tab-port) {
+                    width:100%;
+                    height:270px;
+                }
+            }
+        }
+    }
+}
+
+#testimonial-block {
+    background:$md-grey;
+
+    .container {
+        .columns {
+            align-items: center;
+            
+            .google-schema_review-rating {
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+
+                .ratingValue {
+                    color: $md-grey;
+                }
+            }
+            
+            .google-schema_excerpt {
+                p {
+                    font-size: 24px;
+                    font-weight: normal;
+                    line-height: 165%;
+
+                    @include respond(phone) {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .google-schema_name {
+                color: $dk-blue;
+                font-weight: bold;
+            }
+
+            .column-66 {
+                @include respond(desktop) {
+                    width:52%;
+                }
+
+                @include respond(tab-port) {
+                    width:100%;
+                }
+            }
+            
+            .cta {
+                background: $white;
+                padding: 4% 3% 1%;
+                text-align: center;
+                display: block;
+
+                @include respond(desktop) {
+                    width:40%;
+                }
+
+                @include respond(tab-port) {
+                    width:100%;
+                    margin-top: 50px;
+                }
+
+                @include respond(phone) {
+                    padding:30px;
+                }
+
+                p {
+                    &:first-of-type {
+                        font-size: 24px;
+                        color:$dk-blue;
+                        margin-top: 0;
+                        font-weight: bold;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                .btn {
+                    margin: 0 auto 20px;
+                }
+            }
+        }
+    }
+}
+
+.sidebar {
+    a.posts {
+        font-family: $nunito;
+        padding:15px 0;
+        border-top: 1px solid $md-grey;
+        color:$blk;
+        display: block;
+        width: 100%;
+        line-height: 125%;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:last-of-type {
+            border-bottom: 1px solid $md-grey;
+        }
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+}
+
+#results-block {
+    background:$lt-grey;
+
+    .container {
+        max-width: 90%;
+        
+        h3,
+        .btn {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .columns {
+            align-items: normal;
+            justify-content: center;
+
+            .column-66 {
+                justify-content: center !important;
+            }
+
+            .result {
+                width: 23.6%;
+                padding: 5% 2%;
+                justify-content: center;
+                display: flex;
+                background: $white;
+                margin: 0 .7% 1.4%;
+
+                @include respond(desktop) {
+                    width:31.3%;
+                }
+
+                @include respond(tab-land) {
+                    width:48%;
+                }
+
+                @include respond(phone) {
+                    width:100%;
+                    margin:0 0 15px !important;
+                }
+
+                .result-amount {
+                    font-family: $nunito;
+                    font-weight: 800;
+                    font-size: 36px;
+                    color: $orange;
+                    margin-bottom: 15px;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .result-category {
+                    font-family: $nunito;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    color:$blk;
+                    text-align: center;
+                }
+
+                &:hover {
+                    background:$dk-blue;
+
+                    .result-amount {
+                        color:$white;
+                    }
+
+                    .result-category {
+                        color:$white;
+                    }
+
+                    .icon-right-arrow {
+                        &::before {
+                            color:$white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#prefooter {
+    position: relative;
+    background:$lt-grey;
+
+    .container {
+        .columns {
+            .column-50 {
+                width: 45%;
+
+                @include respond(tab-port) {
+                    width:100%;
+
+                    &.block {
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#related-posts {
+    @include blog-block;
+}

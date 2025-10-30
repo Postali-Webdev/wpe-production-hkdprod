@@ -1,0 +1,15 @@
+{
+    "name": "acf/results",
+    "title": "PPC Results Block",
+    "description": "A custom results block that uses ACF fields.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["results"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "results.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

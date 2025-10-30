@@ -1,0 +1,29 @@
+#cards {
+    @media screen and (max-width: $tab-land) {
+        padding: 0 60px;
+    }
+    @media screen and (max-width: $phone) {
+        padding: 0 30px;
+    }
+    .columns {
+        align-items: stretch !important;    
+        .column-33 {
+            padding: 3%;
+            background-color: $white;
+            display: block;
+
+            @include respond(tab-port) {
+                margin-bottom: 15px;
+                padding: 30px;
+            }
+
+            p {
+                margin-bottom: 0;
+
+                &.xlarge {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

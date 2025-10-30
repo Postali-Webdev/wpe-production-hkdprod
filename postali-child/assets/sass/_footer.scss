@@ -1,0 +1,160 @@
+/**
+ * Footer Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+footer {
+    z-index: 0;
+    position: relative;
+
+    #footer {
+        border-top: 1px solid $md-grey;
+        
+        .container {
+            .columns {
+                .column-1,
+                .column-2, 
+                .column-3, 
+                .column-4 {
+                    p {
+                        margin-bottom: 15px;
+                        
+                        &:first-of-type {
+                            margin-bottom: 5px !important;
+                        }
+                    }
+
+                    @include respond(phone) {
+                        width:100% !important;
+                        margin-bottom:30px;
+                    }
+                }
+                .column-1 {
+                    width: 22%;
+
+                    @include respond(tab-port) {
+                        width:100%;
+                        margin-bottom: 30px;
+
+                        .spacer-90 {
+                            height:30px;
+                        }
+                    }
+                }
+
+                .column-2 {
+                    width: 21%;
+
+                    @include respond(desktop) {
+                        width:40%;
+                    }
+
+                    @include respond(tab-port) {
+                        width:65%
+                    }
+
+                    .footer-map {
+                        iframe {
+                            width: 100%;
+                            height: 160px;
+                        }
+                    }
+                }
+
+                .column-3 {
+                    width:13%;
+
+                    @include respond(desktop) {
+                        width:20%;
+                    }
+
+                    @include respond(tab-port) {
+                        width:30%
+                    }
+
+                    .menu {
+                        margin: 0;
+
+                        li {
+                            margin: 0;
+                            
+                            &::marker {
+                                font-size: 0;
+                            }
+
+                            a {
+                                line-height: 180%;
+                                color: $blk;
+                                font-family: $nunito;
+
+                                &:hover {
+                                    color:$dk-blue;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .column-4 {
+                    width:31%;
+
+                    @include respond(desktop) {
+                        width:100%;
+                        margin-top: 30px;
+                    }
+
+                    @include respond(phone) {
+                        margin-bottom: 0;
+                    }
+
+                    .disclaimer {
+                        font-size: 16px;
+                        line-height: 165%;
+                    }
+
+                    ul.social {
+                        display: inline;
+                        list-style-type: none;
+                        margin: 0;
+
+                        li {
+                            display: inline;
+                            margin: 0;
+
+                            &:not(:first-of-type) {
+                                margin-left: 10px;
+                            }
+
+                            a {
+                                text-decoration: none;
+                            }
+
+                            span {
+                                color:$blk;
+                                font-size: 32px;
+                                transition: $trans;
+
+                                &:hover {
+                                    color:$lt-blue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #footer-utility {
+        background: $md-grey;
+        padding: 10px 0;
+
+        p {
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+#results {
+    padding: 30px 0;
+
+    .container {
+        .columns {
+            align-items: normal;
+
+            .result-cta {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &.mobile {
+                    display: none;
+
+                    @include respond(tab-port) {
+                        display: flex;
+                    }
+                }
+
+                &.desktop {
+                    @include respond(tab-port) {
+                        display: none;
+                    }
+                }
+
+                @include respond(tab-land) {
+                    width: 48%;
+                    margin: 0 1% 2%;
+                }
+
+                @include respond(tab-port) {
+                    width: 100%;
+                    margin: 0 0 15px;
+                    flex-wrap: wrap;
+
+                    p {
+                        width: 100%;
+                    }
+                }
+
+                .cta-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    p {
+                        margin-bottom: 15px !important;
+                        font-size: 22px;
+                        text-align: center;
+                        line-height: 105%;
+                    }
+
+                    a {
+                        margin: 0 auto;
+                        padding: 15px 25px;
+                    }
+                }
+            }
+
+            .result {
+                width: 23.6%;
+                padding: 3% 2%;
+                justify-content: center;
+                display: flex;
+                background: $white;
+                margin: 0 .7% 0;
+
+                @include respond(tab-land) {
+                    width: 48%;
+                    margin: 0 1% 2%;
+                }
+
+                @include respond(tab-port) {
+                    width: 100%;
+                    margin: 0 0 15px;
+                    padding: 50px 20px;
+                }
+
+                .result-amount {
+                    font-family: $nunito;
+                    font-weight: 800;
+                    font-size: 26px;
+                    color: $orange;
+                    margin-bottom: 15px;
+                    width: 100%;
+                    text-align: center;
+
+                    @include respond(desktop) {
+                        font-size: 22px;
+                    }
+                }
+
+                .result-category {
+                    font-family: $nunito;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: $blk;
+                    text-align: center;
+                }
+
+                &:hover {
+                    background: $dk-blue;
+
+                    .result-amount {
+                        color: $white;
+                    }
+
+                    .result-category {
+                        color: $white;
+                    }
+
+                    .icon-right-arrow {
+                        &::before {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

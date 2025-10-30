@@ -1,0 +1,87 @@
+#about {
+    @media screen and (max-width:$tab-land) {
+        max-width: 86%;
+        padding: 0 60px;
+        z-index: 1;
+        position: relative;
+    }
+    .attorney-name {
+        color: $blk;
+    }
+    #attorney-img {
+        .attorney_blocks {
+            width: 100%;
+            justify-content: flex-end;
+            display: flex;
+
+            @media screen and (max-width:$tab-port) {
+                flex-wrap: wrap;
+            }
+
+            a,
+            span {
+                width: auto;
+                display: flex;
+                width: 100%;
+                justify-content: flex-end;
+                @media screen and (max-width:$tab-port) {
+                    justify-content: center;
+                }
+            }
+
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                position: relative;
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            .attorney-wrapper {
+                img {
+                    @media screen and (max-width:$phone) {
+                        height: 200px;
+                        margin-top: 0 !important;
+                        object-fit: cover;
+                        object-position: top;
+                    }
+                }
+            }
+        }
+        
+        &.column-50 {
+            .attorney-img {
+                width: 90%;
+                margin: 0 5% 10px;
+                
+                @media screen and (max-width:$tab-port) {
+                    margin: 20px 0;
+                    width: 100%;
+                }
+            }
+        }
+        &.column-33 {
+            .attorney-img {
+                width:90%;
+            }
+        }
+    }
+    .spacer-60 {
+        @media screen and (max-width:$tab-port) {
+            height:25px;
+        }
+    }
+    .btn {
+        @media screen and (max-width:$tab-port) {
+            width: auto;
+            display:flex;
+        }
+    }
+    .header-cta-text {
+        @media screen and (max-width:$tab-port) {
+            text-align: center;
+        }
+    }
+}

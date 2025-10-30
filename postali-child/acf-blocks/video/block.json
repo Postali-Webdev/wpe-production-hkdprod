@@ -1,0 +1,15 @@
+{
+    "name": "acf/video",
+    "title": "PPC Video Block",
+    "description": "A custom video block that uses ACF fields.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["video"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "video.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

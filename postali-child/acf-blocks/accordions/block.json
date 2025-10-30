@@ -1,0 +1,15 @@
+{
+    "name": "acf/accordion",
+    "title": "PPC Accordion Block",
+    "description": "Accordions block using ACF fields.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["accordion"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "accordions.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

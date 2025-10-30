@@ -1,0 +1,85 @@
+.skip-link {
+    background: $dk-blue;
+    color: $white !important;
+    font-weight: 400;
+    left: 60px;
+    padding: 10px 20px;
+    position: absolute;
+    transform: translateY(-100%);
+    z-index: 100000;
+    top: -15px;
+    font-size: 15px;
+
+    &:focus {
+        transform: translateY(0%);
+        transition: transform 0.3s;
+        top: 40px;
+    }
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    display:flex;
+    height:90px;
+    background:$white;
+    top:0;
+
+    &::after {
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        content: "";
+        bottom: 0px;
+
+        @include blue-gradient;
+    }
+
+    #header-top {
+        display: flex;
+        justify-content: space-between;
+        max-width: 94%;
+        width: 100%;
+        align-items: center;
+        padding: 0 !important;
+        
+        &_left {
+            display: flex;
+            width: 25%;
+            justify-content: flex-start;
+
+            @include respond(desktop-lg) {
+                width:20%;
+            }
+
+            @include respond(tab-land) {
+                width:80%;
+            }
+
+            .custom-logo-link {
+                width: 100%;
+                height: auto;
+                display:flex;
+
+                .custom-logo {
+                    max-height: 55px;
+                    width: auto;
+
+                    @include respond(tab-port) {
+                        max-height: 50px;
+                    }
+
+                    @include respond(phone) {
+                        max-height: 45px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            
+            @include respond(tab-land) {
+                width: 100%;
+            }
+        }
+    }
+}

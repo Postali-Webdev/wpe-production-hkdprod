@@ -1,0 +1,15 @@
+{
+    "name": "acf/cta",
+    "title": "PPC CTA Block",
+    "description": "A custom CTA block that uses ACF fields.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["cta"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "cta.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

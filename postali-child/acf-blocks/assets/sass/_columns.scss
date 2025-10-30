@@ -1,0 +1,8 @@
+.columns-layout {
+    .container {
+        @media screen and (max-width: $tab-port) {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}

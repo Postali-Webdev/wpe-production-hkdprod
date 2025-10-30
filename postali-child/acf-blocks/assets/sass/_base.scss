@@ -1,0 +1,180 @@
+.page-template-page-gutenberg-block {
+    background-color: #f7f7f7 !important;
+
+    .top {
+            margin-bottom: 10px !important;
+            font-weight: 800;
+            line-height: 135%;
+    }
+    .wp-block-columns {
+        max-width: 1600px;
+        margin: 0 auto;
+        width:100%;
+        padding: 0 50px;
+        justify-content: space-between;
+
+        @media screen and (max-width:$phone) {
+            padding:0;
+        }
+
+        .wp-block-image img {
+            width:100% !important;
+        }
+
+        &.book_promo {
+            margin:60px 0;
+            gap: 0;
+            
+            .download_image {
+                align-items: center;
+                justify-content: flex-start !important;
+                display: flex;
+                background-image:url('/wp-content/uploads/2024/06/mini-logo.png');
+                background-repeat:repeat;
+                background-size: 60px;
+
+                img {
+                    max-width: 75%;
+                    margin: 0 auto;
+                }
+            }
+
+            .download_copy {
+                padding: 7% 7% 5%;
+    
+                .has-medium-font-size {
+                    letter-spacing: 2px;
+                }
+    
+                .has-large-font-size {
+                    font-family: $nunito !important;
+                    line-height: 115%;
+                    font-weight: bold;
+                    font-size: 30px !important;
+                }
+
+                .btn {
+                    &:hover {
+                        background-color: white;
+                        color:#213d49 !important;
+                    }
+                }
+            }
+
+        }
+
+        &.slider_map {
+            gap:30px;
+        }
+
+        &.about_attorney {
+            align-items: center !important;
+            margin: 60px 0;
+
+            img {
+                width: 100% !important;
+                border: solid 3px #AED69E;
+                border-radius: 50%;
+                max-width: 80%;
+                margin: 0 auto;
+
+                @media screen and (max-width:$tab-port) {
+                    max-width: 250px;
+                    
+                }
+            }
+        }
+
+        .container {
+            .columns {
+                h1 {
+                    font-family: $nunito !important;
+                    color: #213d49 !important;
+                    font-size: 62px !important;
+                    text-transform: none !important;
+                    line-height: 115%;
+                    margin-bottom: 50px;
+                }
+                    
+                h2 {
+                    color:#1A6B8D !important;
+                    font-size: 34px !important;
+                }
+
+                span.rating {
+                    font-size: 40px;
+                    font-family: $nunito !important;
+                }
+
+                span.stars::after {
+                    position: relative;
+                    content: "★★★★★";
+                    margin-bottom: 10px;
+                    display: inline-block;
+                    letter-spacing: 5px;
+                    color: #1A6B8D;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .block_columns {
+        @media screen and (min-width:$tab-land) {
+            padding:0 30px;
+        }
+    }
+
+    .desktop-left-contact,
+    #header-top_right,
+    footer {
+        display: none !important;
+    }
+
+    .body-container {
+        margin-left: 0 !important;
+
+        @media screen and (min-width:$tab-land) {
+            max-width:70%;
+            margin:100px auto 0 auto !important;
+        }
+
+        section {
+            padding:40px 0;
+
+            @media screen and (max-width:$tab-port) {
+                padding:0;
+            }
+            
+            .container {
+                width: 100%;
+                max-width: 1600px;
+                margin: 0 auto;
+                padding: 0;
+                box-sizing: border-box;
+                @media screen and (max-width:$tab-land) {
+                    max-width: 100%;
+                    padding: 0 60px;
+                    z-index: 1;
+                    position: relative;
+                }
+                .columns {
+                    p {
+                        font-size: 18px !important;
+                        line-height: 145% !important;
+                    }
+                }
+            }
+
+            .ppc-cta-block {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .footer-block {
+        background: #fff;
+        border-top: solid 1px $dk-blue;
+        padding: 20px 0;
+    }
+}

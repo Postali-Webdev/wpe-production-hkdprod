@@ -1,0 +1,103 @@
+{
+    "key": "group_669929948e61e",
+    "title": "PPC Results",
+    "fields": [
+        {
+            "key": "field_669929de19299",
+            "label": "Results",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Highest value results will be pulled in automatically.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_66a27ac9181bb",
+            "label": "Results Category",
+            "name": "results_category",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_column_enabled": 0,
+            "choices": {
+                "default": "All Categories",
+                "auto-accidents": "Auto Accidents",
+                "bike-accidents": "Bike Accidents",
+                "construction-accidents": "Construction Accidents",
+                "medical-malpractice": "Medical Malpractice",
+                "motorcycle-accidents": "Motorcycle Accidents",
+                "municipal-liability": "Municipal Liability",
+                "pedestrian-accidents": "Pedestrian Accidents",
+                "personal-injury": "Personal Injury",
+                "premises-liability": "Premises Liability",
+                "product-liability": "Product Liability",
+                "public-transit": "Public Transit",
+                "slip-and-fall-accidents": "Slip and Fall Accidents",
+                "work-accident": "Work Accident",
+                "wrongful-death": "Wrongful Death"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_6699299519298",
+            "label": "Results CTA",
+            "name": "results_cta",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "admin_column_enabled": 0,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/results"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1721925409
+}

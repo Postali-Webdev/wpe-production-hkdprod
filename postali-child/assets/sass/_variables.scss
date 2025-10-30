@@ -1,0 +1,84 @@
+/**
+ * Sass variables and functions.
+ *
+ * @package Postali Child
+ * @author Postali LLC
+ */
+
+// Breakpoints
+$desktop-xlg: 2100px;
+$desktop-full: 1920px;
+$desktop-lg: 1400px;
+$desktop: 1200px;
+$tab-land: 1024px;
+$tab-port: 820px;
+$phone: 600px;
+
+// Breakpoints - legacy (for PPC)
+$screen-max: 1920px;
+$screen-xxl: 1660px;
+$screen-xl: 1400px;
+$screen-lg: 1200px;
+$screen-mdlg: 1024px;
+$screen-md: 992px;
+$screen-sm: 768px;
+$screen-xs: 667px;
+$screen-xxs: 480px;
+$screen-xxxs: 360px;
+
+// Containers
+$container-max-width: 86%;
+$container-padding:30px;
+
+// Transitions
+$transition-speed:.3s;
+$transition-fast:.3s ease all;
+$transition-slow:.5s ease all;
+
+// Core Colors
+$blk: #313131;
+$white: #FFFFFF;
+$lt-grey: #EFEFEF;
+$md-grey: #E5E5E5;
+$dk-blue:#356F9C;
+$lt-blue: #25AAE1;
+$orange: #CC5D2B;
+
+// legacy colors
+$lt-gray: #EFEFEF;
+$md-gray: #949396;
+$dk-gray: #313131;
+$dkest-gray: #0D0D0D;
+$gutter-gray: #E5E5E5;
+
+$link-transition-speed: .15s;
+$trans: 0.4s ease all;
+
+// Typography
+@font-face {
+    font-family: "Nunito Sans";
+    src: url("../fonts/nunitosans/nunitosans-variable.woff2") format("woff2");
+    font-weight: 200 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src: url("../fonts/nunitosans/nunitosans-variable-italic.woff2") format("woff2");
+    font-weight: 200 900;
+    font-display: swap;
+    font-style: italic;
+}
+
+
+$nunito: "Nunito Sans", sans-serif;
+$oswald: "Oswald", sans-serif;
+$icomoon: 'Icomoon';
+
+$body-line-height: 130%;
+
+// Font Weight
+$normal: 400;
+$bold: 700; 
+$black: 900;
