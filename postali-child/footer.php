@@ -28,6 +28,7 @@
                 <div class="column-3">
                 <?php if (is_tree('17923') || is_post_type_archive('blogesp') || is_singular('blogesp') || is_singular('attorneysesp') || is_post_type_archive('resultsesp') || is_singular('resultsesp') || is_tax('results_attorney_espanol') || is_tax('results_category_esp')) { ?>
                     <p><strong>NAVEGACIÓN</strong></p>
+                    <nav role="navigation">
                     <?php
                         $args = array(
                             'container' => false,
@@ -35,8 +36,10 @@
                         );
                         wp_nav_menu( $args );
                     ?>	
+                    </nav>
                     <?php } else { ?>
                     <p><strong>NAVIGATION</strong></p>
+                    <nav role="navigation">
                     <?php
                         $args = array(
                             'container' => false,
@@ -44,6 +47,7 @@
                         );
                         wp_nav_menu( $args );
                     ?>
+                    </nav>
                     <?php } ?>
                 </div>
                 <div class="column-4">

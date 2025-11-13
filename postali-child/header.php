@@ -132,6 +132,7 @@ $banner_img = get_field('banner_header_photo'); ?>
                     <?php if(!is_404()) { ?>
                     <?php if (is_tree('17923') || is_post_type_archive('blogesp') || is_singular('blogesp') || is_singular('attorneysesp') || is_post_type_archive('resultsesp') || is_singular('resultsesp') || is_tax('results_attorney_espanol') || is_tax('results_category_esp')) { //spanish menu ?>
                         <div class="desktop-nav-container">
+                            <nav role="navigation">
                             <?php
                             $args = array(
                                 'container' => false,
@@ -139,6 +140,7 @@ $banner_img = get_field('banner_header_photo'); ?>
                             );
                             wp_nav_menu( $args );
                             ?>
+                            </nav>
 
                             <ul class="menu search">
                                 <li class="menu-item menu-item-search search-holder">
